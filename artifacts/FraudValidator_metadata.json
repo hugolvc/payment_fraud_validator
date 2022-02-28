@@ -1,0 +1,279 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "id",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "http",
+								"type": "string"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct FraudValidator.Organization",
+						"name": "organization",
+						"type": "tuple"
+					}
+				],
+				"name": "RegisterOrganization",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"components": [
+							{
+								"components": [
+									{
+										"internalType": "address",
+										"name": "id",
+										"type": "address"
+									},
+									{
+										"internalType": "string",
+										"name": "name",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "http",
+										"type": "string"
+									}
+								],
+								"internalType": "struct FraudValidator.Organization",
+								"name": "organization",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "paymetMethodHash",
+								"type": "bytes32"
+							}
+						],
+						"indexed": false,
+						"internalType": "struct FraudValidator.PaymentMethod",
+						"name": "paymentMethod",
+						"type": "tuple"
+					}
+				],
+				"name": "RegisterPaymentMethod",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "getOrganization",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "id",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "http",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "getPaymentMethod",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "id",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "http",
+								"type": "string"
+							}
+						],
+						"internalType": "struct FraudValidator.Organization",
+						"name": "organization",
+						"type": "tuple"
+					},
+					{
+						"internalType": "bytes32",
+						"name": "paymetMethodHash",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_http",
+						"type": "string"
+					}
+				],
+				"name": "registerOrganization",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_reference",
+						"type": "string"
+					}
+				],
+				"name": "registerPaymentMethod",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_reference",
+						"type": "string"
+					}
+				],
+				"name": "validatePaymentMethod",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "id",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "http",
+								"type": "string"
+							}
+						],
+						"internalType": "struct FraudValidator.Organization",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"fraud_validator.sol": "FraudValidator"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"fraud_validator.sol": {
+			"keccak256": "0xeddedcae62d040decc116d2a1b737c888c0c88c54e4cf63f17d91cdfdb0f2a6f",
+			"urls": [
+				"bzz-raw://3bbf7d822ee9b9688377511db8ff7f3346312c0ba632d4d17e87c98a3e04c44c",
+				"dweb:/ipfs/QmYZ9cUCmc6k5v5w7MY6m8PCenkG6PrWgSuUKuy1QJT8bL"
+			]
+		}
+	},
+	"version": 1
+}
